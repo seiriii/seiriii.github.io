@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAPPY BIRTHDAY, MAHAL KOOO! 🤍</title>
+<title>FOR MY DARLING! 😋</title>
 <style>
     body {
         background: #2e2e2e; /* dark gray background */
@@ -14,7 +14,7 @@
         height: 100vh;
         margin: 0;
         font-family: "Courier New", monospace; /* typewriter font */
-        color: #1e3a8a; /* dark blue text */
+        color: #1e3a8a; /* dark blue text for letter */
         text-align: center;
     }
 
@@ -22,13 +22,13 @@
         font-size: 2em;
         margin-bottom: 15px;
         font-weight: 600;
-        color: #1e3a8a;
+        color: #e0e7ff; /* lighter header text */
     }
 
     p {
         font-size: 1.1em;
         margin-bottom: 30px;
-        color: #1e40af;
+        color: #f0f9ff; /* lighter subtitle text */
     }
 
     button {
@@ -51,23 +51,22 @@
         transform: scale(1.05);
     }
 
-    /* Lined-paper style letter box */
+    /* Classic letter-paper style */
     #letterBox {
         display: none;
         background: repeating-linear-gradient(
             to bottom,
-            #f3f4f6 0px,  /* light gray line */
-            #f3f4f6 2px,
-            #e5e7eb 28px   /* slightly darker gray between lines */
+            #fdf6e3 0px,    /* very light line */
+            #fdf6e3 27px,
+            #d2d2d2 28px    /* slightly darker background between lines */
         );
-        background-size: 100% 28px;
         color: #1e3a8a; /* dark blue text */
-        padding: 30px 30px 30px 50px; /* left padding to avoid dots */
-        border-radius: 15px;
+        padding: 30px 30px 30px 70px; /* extra left padding for dots */
+        border-radius: 10px;
         width: 90%;
         max-width: 700px;
         font-size: 1.1em;
-        line-height: 1.8em;
+        line-height: 1.6em;
         white-space: pre-wrap;
         overflow-wrap: break-word;
         font-family: "Courier New", monospace;
@@ -78,16 +77,15 @@
         position: relative;
     }
 
-    /* Left margin dots for paper look */
     #letterBox::before {
         content: "";
         position: absolute;
         top: 0;
-        left: 20px;
-        width: 20px;
+        left: 20px; /* margin line dots */
+        width: 25px;
         height: 100%;
-        background-image: radial-gradient(circle, #f3f4f6 5px, transparent 6px);
-        background-size: 20px 40px;
+        background-image: radial-gradient(circle, #2e2e2e 6px, transparent 7px);
+        background-size: 25px 40px;
         background-repeat: repeat-y;
         pointer-events: none;
     }
@@ -96,7 +94,7 @@
 <body>
 
 <h1>HAPPY BIRTHDAY, MAHAL KO! 🤍</h1>
-<p>I made this little space for you 🤍</p>
+<p>I made this little space for you</p>
 
 <!-- Buttons -->
 <button id="playlistBtn">🎧 Play Me</button>
