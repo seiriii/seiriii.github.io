@@ -24,23 +24,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>GOOD DAY, MY PRETTY BABY! 🩷</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: arial;
 }
 
+/* Dark theme */
 body {
-  background: #2e2e2e; /* dark background like Project 2 */
+  background: #2e2e2e;
   color: #dbeafe;
-  font-family: "Courier New", monospace;
-  text-align: center;
-  min-height: 100vh;
 }
 
 .cover {
@@ -60,47 +59,41 @@ body {
     #fdf6e3 0px,
     #fdf6e3 27px,
     #d2d2d2 28px
-  ); /* light paper lines like Project 2 */
+  ); /* paper lines */
   color: #0B1E5C; /* dark blue text */
   display: flex;
   position: absolute;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   top: 15%;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  text-align: center;
+  padding: 20px;
 }
 
-.content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: 20px;
-  height: 100%;
-  background-image: radial-gradient(circle, #2e2e2e 5px, transparent 6px);
-  background-size: 20px 40px;
-  background-repeat: repeat-y;
-  pointer-events: none;
-}
-
-img{
+img {
   width: 200px;
   height: 200px;
-  margin-bottom: 15px;
+}
+
+span {
+  font-family: 'Rubik Gemstones', cursive;
+  font-size: 1.3em;
+  margin: 10px 0;
 }
 
 button {
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 8px;
+  position: absolute;
+  bottom: -80px;
+  height: 45px;
+  width: 100px;
+  background-color: rgba(255,255,255,0.3);
   border: none;
-  font-family: 'Anton', sans-serif;
+  border-radius: 3px;
+  transition: 0.3s;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: transform 0.3s;
+  font-family: 'Anton', sans-serif;
 }
 
 button:hover {
@@ -132,55 +125,51 @@ button:hover {
 </style>
 </head>
 <body>
-
 <div class="cover" id="cover">
   <div class="content">
     <img src="8bdd5cad0dca933d7ef52b353ef09aea.gif" alt="">
     <span>Do you love me?</span>
-    <div>
-      <button class="tombol iya" onclick="proses(this)" value="iya">Yes</button>
-      <button class="tombol tidak" onclick="proses(this)" value="tidak" id="tidak">No</button>
-    </div>
+    <button class="tombol iya" onclick="proses(this)" value="iya">Yes</button>
+    <button class="tombol tidak" onclick="proses(this)" value="tidak" id="tidak">No</button>
   </div>
 </div>
 
 <center>
-  <button class="blue-btn" onclick="window.location.href = 'project2.html';">🎉 CLICK ME! 🎂</button>
+  <button class="blue-btn" onclick="window.location.href = 'vids.html';">CLICK ME! 🎂</button>
 </center>
 
 <script>
-const img = document.querySelector("img");
-const span = document.querySelector("span");
-const btn = document.querySelector("#tidak");
-let klakKlik = 0;
-
+const img = document.querySelector("img")
+const span = document.querySelector("span")
+const btn = document.querySelector("#tidak")
+let klakKlik = 0
 let proses = (a)=>{
   if(a.value == "iya"){
-    img.src = "f048598f500480b318789fd896f2ca09.gif";
-    btn.style.bottom = "-80px";
-    btn.style.right = "20px";
-    span.innerText = "I love you so much, Daniella Clarisse! 🤍";
-    alert("NYE NYE");
+    img.src = "f048598f500480b318789fd896f2ca09.gif"
+    btn.style.bottom = "-80px"
+    btn.style.right = "20px"
+    span.innerText = "I love you so much, Daniella Clarisse! 🤍"
+    alert("NYE NYE")
     alert("HAPPY BIRTHDAY AGAIN! MWA 🤪");
     if(btn.style.opacity == "0"){
-      btn.style.opacity = "1";
-      klakKlik = 5;
+      btn.style.opacity = "1"
+      klakKlik = 5
     }
   }else if(a.value == "tidak"){
-    klakKlik++;
-    img.src = "415ec7a8d9bded6c901b3858caba5358.gif";
+    klakKlik++
+    img.src = "9f4f0f07aa3ba6ee248b93cc8df52cd6.gif"
     if(klakKlik > 10){
-      btn.style.opacity = "0";
-      span.innerText = "AW, MY BABY DOESN'T LOVE ME ANYMOREEE 🥺";
+      btn.style.opacity = "0"
+      span.innerText = "AW, MY BABY DOESN'T LOVE ME ANYMOREEE 🥺"
     }else{
-      span.innerText = "ABA 🤨";
+      span.innerText = "ABA 🤨"
     }
-    let randomPosisi = Math.floor(Math.random() * 400);
-    a.style.bottom= randomPosisi * 1.02 + "px";
-    a.style.right = randomPosisi / 2 + "px";
+    img.src = "415ec7a8d9bded6c901b3858caba5358.gif"
+    let randomPosisi = Math.floor(Math.random() * 400)
+    a.style.bottom= randomPosisi * 1.02 + "px"
+    a.style.right = randomPosisi / 2 + "px"
   }
 }
 </script>
-
 </body>
 </html>
