@@ -14,7 +14,7 @@
         height: 100vh;
         margin: 0;
         font-family: "Courier New", monospace; /* typewriter font */
-        color: #dbeafe; /* light blue text */
+        color: #1e3a8a; /* dark blue text */
         text-align: center;
     }
 
@@ -22,18 +22,18 @@
         font-size: 2em;
         margin-bottom: 15px;
         font-weight: 600;
-        color: #dbeafe;
+        color: #1e3a8a;
     }
 
     p {
         font-size: 1.1em;
         margin-bottom: 30px;
-        color: #e0e7ff;
+        color: #1e40af;
     }
 
     button {
-        background: #4b5563; /* gray button */
-        color: #dbeafe; /* light text */
+        background: #d1d5db; /* light gray button */
+        color: #1e3a8a; /* dark blue text */
         padding: 12px 25px;
         border: none;
         border-radius: 8px;
@@ -47,16 +47,21 @@
     }
 
     button:hover {
-        background: #6b7280; /* lighter gray */
+        background: #9ca3af; /* darker gray on hover */
         transform: scale(1.05);
     }
 
     /* Lined-paper style letter box */
     #letterBox {
         display: none;
-        background: linear-gradient(#2e2e2e 27px, #3a3a3a 28px); /* subtle horizontal lines */
+        background: repeating-linear-gradient(
+            to bottom,
+            #f3f4f6 0px,  /* light gray line */
+            #f3f4f6 2px,
+            #e5e7eb 28px   /* slightly darker gray between lines */
+        );
         background-size: 100% 28px;
-        color: #dbeafe; /* light text */
+        color: #1e3a8a; /* dark blue text */
         padding: 30px 30px 30px 50px; /* left padding to avoid dots */
         border-radius: 15px;
         width: 90%;
@@ -73,14 +78,15 @@
         position: relative;
     }
 
+    /* Left margin dots for paper look */
     #letterBox::before {
         content: "";
         position: absolute;
         top: 0;
-        left: 20px; /* dots margin */
+        left: 20px;
         width: 20px;
         height: 100%;
-        background-image: radial-gradient(circle, #2e2e2e 5px, transparent 6px);
+        background-image: radial-gradient(circle, #f3f4f6 5px, transparent 6px);
         background-size: 20px 40px;
         background-repeat: repeat-y;
         pointer-events: none;
@@ -90,7 +96,7 @@
 <body>
 
 <h1>HAPPY BIRTHDAY, MAHAL KO! 🤍</h1>
-<p>I made this little space for you</p>
+<p>I made this little space for you 🤍</p>
 
 <!-- Buttons -->
 <button id="playlistBtn">🎧 Play Me</button>
