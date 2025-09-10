@@ -14,7 +14,7 @@
         height: 100vh;
         margin: 0;
         font-family: "Courier New", monospace; /* typewriter font */
-        color: #3b82f6; /* blue font */
+        color: #1e3a8a; /* dark blue font */
         text-align: center;
     }
 
@@ -22,18 +22,18 @@
         font-size: 2em;
         margin-bottom: 15px;
         font-weight: 600;
-        color: #3b82f6;
+        color: #1e3a8a;
     }
 
     p {
         font-size: 1.1em;
         margin-bottom: 30px;
-        color: #60a5fa;
+        color: #1e40af;
     }
 
     button {
         background: #4b5563; /* gray button */
-        color: #3b82f6; /* blue text */
+        color: #1e3a8a; /* dark blue text */
         padding: 12px 25px;
         border: none;
         border-radius: 8px;
@@ -56,17 +56,17 @@
         display: none;
         background: repeating-linear-gradient(
             to bottom,
-            #d1d5db 0px,
-            #d1d5db 27px,
-            #9ca3af 28px
-        ); /* subtle gray lines */
-        color: #3b82f6;
-        padding: 30px 30px 30px 70px;
+            #e5e7eb 0px,  /* very light line */
+            #e5e7eb 1px,
+            #d1d5db 2px   /* space between lines */
+        );
+        color: #1e3a8a; /* dark blue text */
+        padding: 30px 30px 30px 50px; /* left padding to avoid dots */
         border-radius: 15px;
         width: 90%;
         max-width: 700px;
         font-size: 1.1em;
-        line-height: 1.6em;
+        line-height: 1.8em; /* spacing for readability */
         white-space: pre-wrap;
         overflow-wrap: break-word;
         font-family: "Courier New", monospace;
@@ -81,13 +81,12 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
-        width: 25px;
+        left: 20px; /* dots moved away from text */
+        width: 20px;
         height: 100%;
-        background-image: radial-gradient(circle, #2e2e2e 6px, transparent 7px);
-        background-size: 25px 40px;
+        background-image: radial-gradient(circle, #2e2e2e 5px, transparent 6px);
+        background-size: 20px 40px;
         background-repeat: repeat-y;
-        background-position: center;
         pointer-events: none;
     }
 </style>
@@ -117,7 +116,7 @@ const message = `soooo, before this special day ends, I just want to tell you ho
 
 Cheers to the most amazing person in my lifeee rn! Happy 24th Birthday po, mahal kooo! 🎂  
 
-You are the most genuine person I've ever met. Nasa tg palang tayo pero ramdam ko na, you are pure hihi. A kind soul with a pure heart! 🫶🏻 hindi man halata pero you inspire me in so many ways. Those actions, words, and little gestures of yours motivate me to be a better person hihi. And yung hardwork mo? top tier! I know na gamit na gamit na itong line na ito pero you really deserve all the love in the world hihi and as long as I am breathing, you will always be loved by me.  
+You are the most genuine person I've ever met. Nasa tg palang tayo pero ramdam ko na, you are pure hihi. A kind soul with a pure heart! 🫶🏻 hindi man halata pero you inspire me in so many ways. Those actions, words, and little gestures of yours motivates me to be a better person hihi. And yung hardwork mo? top tier! I know na gamit na gamit na itong line na ito pero you really deserve all the love in the world hihi and as long as I am breathing, you will always be loved by me.  
 
 You can always share everything with me, okay? your problems, your rants, your chikas, or kahit mga random thoughts HAHAHAHAHAHAHA willing and ready po akong mag listen 😝  And I just want you to know that whatever happens, I will always be your kakampi. Don't forget that 🤨  
 
@@ -156,7 +155,7 @@ messageBtn.addEventListener("click", () => {
         if (i < message.length) {
             typedText.innerHTML += message.charAt(i);
             i++;
-            let randomDelay = Math.random() * 70 + 50; // slightly slower: 50-120ms
+            let randomDelay = Math.random() * 70 + 50; // 50-120ms
             setTimeout(typeWriter, randomDelay);
         }
     }
