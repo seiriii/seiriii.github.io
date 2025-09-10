@@ -14,7 +14,7 @@
         height: 100vh;
         margin: 0;
         font-family: "Courier New", monospace; /* typewriter font */
-        color: #dbeafe; /* light blue text for readability */
+        color: #dbeafe; /* light blue text */
         text-align: center;
     }
 
@@ -28,7 +28,7 @@
     p {
         font-size: 1.1em;
         margin-bottom: 30px;
-        color: #e0e7ff; /* slightly lighter than h1 */
+        color: #e0e7ff;
     }
 
     button {
@@ -54,12 +54,8 @@
     /* Lined-paper style letter box */
     #letterBox {
         display: none;
-        background: repeating-linear-gradient(
-            to bottom,
-            #e5e7eb 0px,  /* very light line */
-            #e5e7eb 1px,
-            #3a3a3a 2px   /* darker gray background between lines */
-        );
+        background: linear-gradient(#2e2e2e 27px, #3a3a3a 28px); /* subtle horizontal lines */
+        background-size: 100% 28px;
         color: #dbeafe; /* light text */
         padding: 30px 30px 30px 50px; /* left padding to avoid dots */
         border-radius: 15px;
@@ -81,7 +77,7 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 20px; /* dots moved away from text */
+        left: 20px; /* dots margin */
         width: 20px;
         height: 100%;
         background-image: radial-gradient(circle, #2e2e2e 5px, transparent 6px);
@@ -94,7 +90,7 @@
 <body>
 
 <h1>HAPPY BIRTHDAY, MAHAL KO! 🤍</h1>
-<p>I made this little space for you </p>
+<p>I made this little space for you</p>
 
 <!-- Buttons -->
 <button id="playlistBtn">🎧 Play Me</button>
@@ -105,18 +101,18 @@
     <p id="typedText"></p>
 </div>
 
-<!-- Background music (autoplay & loop) -->
+<!-- Background music -->
 <audio autoplay loop>
     <source src="dwta_-_Padaba_Taka__Lyric_Video_with_Tagalog_Translation_(256k).mp3" type="audio/mp3">
 </audio>
 
 <script>
-// Birthday message
+// Full birthday message
 const message = `soooo, before this special day ends, I just want to tell you how much you mean to me and how wonderful you are 😝  
 
 Cheers to the most amazing person in my lifeee rn! Happy 24th Birthday po, mahal kooo! 🎂  
 
-You are the most genuine person I've ever met. Nasa tg palang tayo pero ramdam ko na, you are pure hihi. A kind soul with a pure heart! 🫶🏻 hindi man halata pero you inspire me in so many ways. Those actions, words, and little gestures of yours motivates me to be a better person hihi. And yung hardwork mo? top tier! I know na gamit na gamit na itong line na ito pero you really deserve all the love in the world hihi and as long as I am breathing, you will always be loved by me.  
+You are the most genuine person I've ever met. Nasa tg palang tayo pero ramdam ko na, you are pure hihi. A kind soul with a pure heart! 🫶🏻 Hindi man halata pero you inspire me in so many ways. Those actions, words, and little gestures of yours motivate me to be a better person hihi. And yung hardwork mo? top tier! I know na gamit na gamit na itong line na ito pero you really deserve all the love in the world hihi and as long as I am breathing, you will always be loved by me.  
 
 You can always share everything with me, okay? your problems, your rants, your chikas, or kahit mga random thoughts HAHAHAHAHAHAHA willing and ready po akong mag listen 😝  And I just want you to know that whatever happens, I will always be your kakampi. Don't forget that 🤨  
 
@@ -124,7 +120,7 @@ Gusto ko happy din ikaw lagi and walang iniisip masyado because I will never be 
 
 I pray for your happiness, safety, and health hihi. I wish you achieve everything you've worked so hard for! I'll always be your biggest supporter, mahal kooo. I'm always here, cheering for you hihi. May all your dreams come trueee, mahal kooo! ♥️  
 
-You're a year older than yesterday, pero ikaw pa rin ang baby ko hihi. Thank you for painting colors in my once dull life. I mean, happy naman ako before, but with you, it's different. You've filled my days with so much love, laughter and meaning. The kilig moments, the spicy ones, even yung mga tampuhan hihi I will never forget those memories I shared with you hihi. I never thought I could experience this kind of happiness. I'll always thank you for that. AGHH, MY SUNSHINEEE! I'm so lucky to have you and I'm just so glad you exist. Thank you for loving meeee! and thank you for choosing me every single day kahit na lagi kitang iniinis HAHAHAHAHAHAHAH apologies for that hihi. Thank you so much sa patience and understanding, it means so much to me hihi. Ang dami pang pumapasok sa isip ko pero hindi ko na ma-put into words huhu  
+You're a year older than yesterday, pero ikaw pa rin ang baby ko hihi. Thank you for adding color to my once dull life. I mean, happy naman ako before, but with you, it's different. You've filled my days with so much love, laughter, and meaning. The kilig moments, the spicy ones, even yung mga tampuhan hihi I will never forget those memories I shared with you hihi. I never thought I could experience this kind of happiness. I'll always thank you for that. AGHH, MY SUNSHINEEE! I'm so lucky to have you, and I'm just so glad you exist. Thank you for loving meeee! And thank you for choosing me every single day kahit na lagi kitang iniinis HAHAHAHAHAHAHAH apologies for that hihi. Thank you so much sa patience and understanding, it means so much to me hihi. Ang dami pang pumapasok sa isip ko pero hindi ko na ma-put into words huhu  
 
 HAPPY BIRTHDAY AGAIN, MAHAL KOOO! I HOPE HAPPY KA TODAY HIHI LOOKING FORWARD TO CELEBRATING MORE BIRTHDAYS WITH ME, MAHAL NA MAHAL KITAAAA! 🤍  
 
@@ -155,7 +151,7 @@ messageBtn.addEventListener("click", () => {
         if (i < message.length) {
             typedText.innerHTML += message.charAt(i);
             i++;
-            let randomDelay = Math.random() * 70 + 50; // 50-120ms
+            let randomDelay = Math.random() * 70 + 50; // 50-120ms typing
             setTimeout(typeWriter, randomDelay);
         }
     }
