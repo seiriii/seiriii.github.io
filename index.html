@@ -1,180 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-      alert("⚠️ WARNING ⚠️");   
-      alert("This site contains dangerously high levels of love and affection 😝");  
-      alert("Side effects may include: butterflies in your stomach, random smiles, and nonstop thinking of me 😋");   
-      alert("Continue at your own risk…");
-      alert("I MIGHT NEVER STOP LOVING YOU");   
-      alert("Loading...");
-      alert("Please wait...");
-      alert("HUGS AND KISSES ARE ON THE WAY! 💋");
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOOD DAY, MY PRETTY BABY! 🩷</title>
+<style>
+  body {
+    background: #2e2e2e;
+    color: #dbeafe;
+    font-family: "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+  }
 
-      alert("HAPPY 24TH BIRTHDAY, MAHAL KOOO!");
-      alert("I HOPE NA-ENJOY MO ANG IYONG DAY HIHI");
-      alert("hindi ako magaling gumawa nito, so please bear with me. 😠");
-      alert("MAHAL NA MAHAL KITAAAA! 🤍");
+  .paper-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: repeating-linear-gradient(
+      to bottom,
+      #fdf6e3 0px,
+      #fdf6e3 27px,
+      #d2d2d2 28px
+    );
+    color: #0B1E5C;
+    padding: 30px 30px 30px 70px;
+    border-radius: 10px;
+    line-height: 1.6em;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-family: "Courier New", monospace;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    text-align: center;
+  }
 
-      alert("⚠️ WARNING ⚠️");   
-      alert("⚠️ WARNING ⚠️");   
-    </script>
+  .paper-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 20px;
+    height: 100%;
+    background-image: radial-gradient(circle, #2e2e2e 5px, transparent 6px);
+    background-size: 20px 40px;
+    background-repeat: repeat-y;
+    pointer-events: none;
+  }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GOOD DAY, MY PRETTY BABY! 🩷</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-        
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: arial;
-        }
-        .cover{
-            width: 100%;
-            height: 120vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background:linear-gradient(50deg,#b0d2ff,#5b7ca1);
-        }
-        .content{
-            width: 300px;
-            height: 300px;
-            background-color: rgba(255, 255, 255, 0.329);
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            border-radius: 5px;
-            top: 15%;
-        }
-        img{
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            top: 0;
-        }
-        button{
-            position: absolute;
-            bottom: -80px;
-            height: 45px;
-            width: 100px;
-            background-color: rgba(255,255,255, .3);
-            border: none;
-            border-radius: 3px;
-            transition: .3s;
-            letter-spacing: 1px;
-            cursor: pointer;
-            font-family: 'Anton', sans-serif;
-        }
-        button:hover {
-            transform: scale(1.1);
-        }
-        .iya{
-            left: 20px;
-        }
-        .tidak{
-            right: 20px;
-        }
-        span{
-            position: absolute;
-            bottom: 20%;
-            font-family: 'Rubik Gemstones', cursive;
-            width: 100%;
-            background-color: transparent;
-            padding: 0 20px;
-            font-size: 1.3em;
-            text-align: center;
-        }
-        button, .content{
-            box-shadow: 0 0 4px rgba(0,0,0, .4);
-        }
-        h3{
-            position: absolute;
-            bottom: 10px;
-            letter-spacing: 2px;
-            font-size: 8px;
-            font-family: arial;
-        }
+  button {
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Courier New", monospace;
+    cursor: pointer;
+    font-size: 16px;
+  }
 
-        /* Blue birthday button */
-        .blue-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            padding: 15px 25px;
-            color: #fff;
-            font-weight: bold;
-            text-align: center;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
-        }
-        .blue-btn:hover {
-            background: linear-gradient(135deg, #3a8dde, #00c6ff);
-            transform: scale(1.05);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-        }
-    </style>
+  .blue-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+  }
+  .blue-btn:hover {
+    background: linear-gradient(135deg, #3a8dde, #00c6ff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  }
+
+</style>
 </head>
-
 <body>
-    <div class="cover" id="cover">
-        <div class="content">
-            <img src="8bdd5cad0dca933d7ef52b353ef09aea.gif" alt="">
-            <span>Do you love me?</span>
-            <button class="tombol iya" onclick="proses(this)" value="iya">Yes</button>
-            <button class="tombol tidak" onclick="proses(this)" value="tidak" id="tidak">No</button>
-        </div>
-    </div>
 
-    <center>
-        <button class="blue-btn" onclick="window.location.href = 'vids.html';">🎉 CLICK ME! 🎂</button>
-    </center>
+<div class="paper-box">
+  <img src="8bdd5cad0dca933d7ef52b353ef09aea.gif" alt="GIF" style="width:200px;height:200px;margin-bottom:20px;">
+  <span>Do you love me?</span>
+  <div>
+    <button onclick="loveChoice(this)" value="yes">Yes</button>
+    <button onclick="loveChoice(this)" value="no" id="noBtn">No</button>
+  </div>
+  <button class="blue-btn" onclick="goToProject2()">CLICK ME! 🎂</button>
+</div>
 
-    <script>
-        const img = document.querySelector("img")
-        const span = document.querySelector("span")
-        const btn = document.querySelector("#tidak")
-        
-        let klakKlik = 0
-     
-        let proses = (a)=>{
-            if(a.value == "iya"){
-                img.src = "f048598f500480b318789fd896f2ca09.gif"
-                btn.style.bottom = "-80px"
-                btn.style.right = "20px"
-                span.innerText = "I love you so much, Daniella Clarisse! 🤍"
-                alert("NYE NYE")
-                alert("HAPPY BIRTHDAY AGAIN! MWA 🤪");
+<script>
+let noBtn = document.getElementById("noBtn");
+let clickCount = 0;
 
-                if(btn.style.opacity == "0"){
-                    btn.style.opacity = "1"
-                    klakKlik = 5
-                }
-            }else if(a.value == "tidak"){
-                klakKlik++
-                img.src = "9f4f0f07aa3ba6ee248b93cc8df52cd6.gif"
-                if(klakKlik > 10){
-                    btn.style.opacity = "0"
-                    span.innerText = "AW, MY BABY DOESN'T LOVE ME ANYMOREEE 🥺"
-                }else{
-                    span.innerText = "ABA 🤨"
-                }
-                img.src = "415ec7a8d9bded6c901b3858caba5358.gif"
-                let randomPosisi =  Math.floor(Math.random() * 400)
-                a.style.bottom= randomPosisi * 1.02 + "px"
-                a.style.right = randomPosisi / 2 + "px"
-            }
-        }
-    </script>
+function loveChoice(btn){
+  if(btn.value === "yes"){
+    alert("NYE NYE");
+    alert("HAPPY BIRTHDAY AGAIN! MWA 🤪");
+    btn.parentElement.previousElementSibling.src = "f048598f500480b318789fd896f2ca09.gif";
+  } else {
+    clickCount++;
+    btn.parentElement.previousElementSibling.src = "415ec7a8d9bded6c901b3858caba5358.gif";
+    if(clickCount > 10){
+      btn.style.opacity="0";
+      btn.parentElement.previousElementSibling.nextElementSibling.innerText="AW, MY BABY DOESN'T LOVE ME ANYMOREEE 🥺";
+    } else{
+      btn.parentElement.previousElementSibling.nextElementSibling.innerText="ABA 🤨";
+      let randomPos = Math.floor(Math.random()*400);
+      btn.style.bottom=randomPos*1.02 + "px";
+      btn.style.right=randomPos/2 + "px";
+    }
+  }
+}
+
+function goToProject2(){
+  window.location.href = "project2.html"; // redirect to Project 2 page
+}
+</script>
+
 </body>
 </html>
